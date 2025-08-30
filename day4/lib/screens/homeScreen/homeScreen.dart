@@ -15,20 +15,43 @@ class _homeScreenState extends State<homeScreen> {
         title: Text('Home'),
         backgroundColor: Colors.green,
       ),
-      body: ElevatedButton(
-          onPressed :(){
-            print('Button');
-
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.green,
-            foregroundColor: Colors.white,),
-
-          child: Text("1",
-          ),
-
-
-
-    ));
+      body: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            ElevatedButton(
+              onPressed: () {
+                print('1');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green,
+                foregroundColor: Colors.white,),
+              child: Text('1'),
+            ),
+            SizedBox(height: 20), // Adds space between buttons
+            ElevatedButton(
+              onPressed: () {
+                print('2');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green,
+                foregroundColor: Colors.white,),
+              child: Text('2'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                print('Button 3 Pressed');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green,
+                foregroundColor: Colors.white,),
+              child: Text('3'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
+
